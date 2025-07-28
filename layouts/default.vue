@@ -1,11 +1,11 @@
+<script setup lang="ts">
+</script>
+
 <template>
     <div>
         <p>Layout - default</p>
         <slot />
     </div>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style scoped></style>

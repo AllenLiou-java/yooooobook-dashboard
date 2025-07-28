@@ -2,8 +2,6 @@
 	"workbench.tree.indent": 20,
 	"emmet.triggerExpansionOnTab": true,
 	"editor.tabSize": 4,
-	// Required in vscode-eslint < v3.0.10 only
-	"eslint.useFlatConfig": true,
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit"

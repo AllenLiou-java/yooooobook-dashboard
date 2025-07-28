@@ -1,43 +1,54 @@
-<template>
-    <div>
-        <Prac
-            foo="foo123"
-            :bar="456"
-        />
-        <p>userName: {{ userName }}</p>
-        <p>count: {{ count }}</p>
-        <p>doubleCount: {{ doubleCount }}</p>
-        <button
-            class="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800"
-            @click="addCount"
-        >
-            add
-        </button>
-
-        <button
-            class="my-button mx-4 px-6 py-2"
-            @click="addFive"
-        >
-            +5
-        </button>
-    </div>
-</template>
-
 <script setup lang="ts">
 definePageMeta({
-    layout: 'custom'
+    layout: 'blank'
 })
 
 const pracStore = usePracStore()
 const { userName, count, doubleCount } = storeToRefs(pracStore)
 const { addCount } = pracStore
 
-const addFive = () => {
+function addFive() {
     setTimeout(() => {
         pracStore.count += 5
     }, 1000)
 }
 </script>
 
-<style scoped>
+<template>
+    <div>
+        <Prac
+            foo="foo123"
+            :bar="456"
+        />
+        <p class=" bg-cyan text-16 text-myprimary hover:(bg-yellow text-red)">
+            userName: {{ userName }}
+        </p>
+        <p class="text-primary">
+            count: {{ count }}
+        </p>
+        <p>doubleCount: {{ doubleCount }}</p>
+        <button
+            class="sm:px-8 sm:py-3 bg-sky-700 px-4 py-2 text-white hover:bg-sky-800"
+            @click="addCount"
+        >
+            add
+        </button>
+
+        <button
+            class="btn-red"
+            @click="addFive"
+        >
+            +5
+        </button>
+        <hr>
+        <ul>
+            <li>123</li>
+            <li>456</li>
+            <li>789</li>
+        </ul>
+        <a href="#">test a tag</a>
+    </div>
+</template>
+
+<style lang="scss" scoped>
 </style>
