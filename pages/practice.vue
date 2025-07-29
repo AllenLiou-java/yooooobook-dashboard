@@ -20,7 +20,7 @@ function addFive() {
             foo="foo123"
             :bar="456"
         />
-        <p class=" bg-cyan text-16 text-myprimary hover:(bg-yellow text-red)">
+        <p class="bg-cyan text-16 text-myprimary hover:(bg-yellow text-red)">
             userName: {{ userName }}
         </p>
         <p class="text-primary">
@@ -28,7 +28,7 @@ function addFive() {
         </p>
         <p>doubleCount: {{ doubleCount }}</p>
         <button
-            class="sm:px-8 sm:py-3 bg-sky-700 px-4 py-2 text-white hover:bg-sky-800"
+            class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
             @click="addCount"
         >
             add

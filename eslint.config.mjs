@@ -1,18 +1,24 @@
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs'
 import stylistic from '@stylistic/eslint-plugin'
+import unocss from '@unocss/eslint-config/flat'
 
 export default withNuxt(
     // @ts-ignore
+    unocss,
+    {
+        files: ['**/*.{vue}'],
+        rules: {
+            'unocss/order': 'error'
+        }
+    },
     // Your custom configs here
     {
         files: ['**/*.{js,ts,mjs,vue}'],
-        // 定義 ESLint 插件
         plugins: {
             '@stylistic': stylistic
         },
         rules: {
-            // 'unocss/order': 'error',
             // 'no-undef': 'off',
             'vue/html-indent': ['error', 4],
             'vue/multi-word-component-names': 'off',
